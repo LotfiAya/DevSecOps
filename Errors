@@ -22,7 +22,7 @@ We first joined the worker machine to the master. After the jointure, kubelet st
  4️⃣ Jointure Issues
  🔹 4.1 Jointure to the Master Failure
  ❌ Problem:
-The worker failed to join the master due to a misconfiguration in the **/etc/containerd/config.toml** file.
+The worker failed to join the master due to a misconfiguration in the /etc/containerd/config.toml file.
  ✅ Solution:
 We reconfigured the `config.toml` file. However, this configuration varies between machines, so adjustments must be made according to the specific environment.
 
