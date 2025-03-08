@@ -1,0 +1,54 @@
+🛠️ Error Report - Kubernetes Deployment on Ubuntu 20.04
+
+1️⃣ Version Compatibility
+❌ Problem:
+During installation, we encountered a compatibility issue due to using different versions of Docker and Kubernetes across machines. This prevented Kubernetes from functioning properly.
+✅ Solution:
+We resolved this by ensuring that all machines use the same versions of Docker and Kubernetes.
+
+ 2️⃣ Network Connection (Access Point)
+ ❌ Problem:
+- The connection of the bridge with the Euromed University Wi-Fi network caused issues, preventing us from accessing the network.
+- Some machines did not display an IP address.
+ ✅ Solution:
+We connected the bridge to an access point, which stabilized the connection and resolved the IP address display issues.
+
+ 3️⃣ Kubelet Issue on Worker Machine
+ ❌ Problem:
+ The kubelet service was not running on the worker node.
+ ✅ Solution:
+We first joined the worker machine to the master. After the jointure, kubelet started running properly.
+
+ 4️⃣ Jointure Issues
+ 🔹 4.1 Jointure to the Master Failure
+ ❌ Problem:
+The worker failed to join the master due to a misconfiguration in the **/etc/containerd/config.toml** file.
+ ✅ Solution:
+We reconfigured the `config.toml` file. However, this configuration varies between machines, so adjustments must be made according to the specific environment.
+
+ 🔹 4.2 Certificate Issue
+ ❌ Problem:
+A certificate error occurred when joining the worker to the cluster.
+ ✅ Solution:
+[To be completed based on the applied fix]
+
+
+5️⃣ Node Issues
+### ❌ Problem:
+Nodes were not displaying correctly in the Kubernetes node list.
+### ✅ Solution:
+See the image below:
+
+📸 ![Screenshot - Node Issue](PLACEHOLDER_FOR_SCREEN)
+
+---
+
+## 6️⃣ Pod Crash Issues (Images)
+### ❌ Problem:
+Some pods failed to start due to issues with Docker images.
+### ✅ Solution:
+See the image below:
+
+📸 ![Screenshot - Pod Issue](PLACEHOLDER_FOR_SCREEN)
+
+
