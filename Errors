@@ -52,5 +52,18 @@ See the image below:
 📸 ![Screenshot - Pod Issue](PLACEHOLDER_FOR_SCREEN)
 
 
+7️⃣ Kubernetes API Server Connection Refused
+❌ Problem:
+
+The kubectl get pods -n kube-system command fails because the connection to the Kubernetes API server (192.168.15.29:6443) is refused. 
+This indicates that the API server is down, misconfigured, or unreachable (erreur6.png).
+✅ Solution:
+we Allow Kubernetes API port (6443) through the firewall:
+
+
+
+
+
+
 
 
